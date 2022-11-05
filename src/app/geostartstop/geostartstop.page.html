@@ -1,0 +1,38 @@
+<!-- eslint-disable @angular-eslint/template/eqeqeq -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Geo Service</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="block" ion-button (tap)="start()">{{ 'start' }}</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" expand="block" ion-button (tap)="stop()">{{ 'stop' }}</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    <div class="stopwatch pt-3">
+      <h1 text-center class="color-white font-lg">
+        {{time}}
+      </h1>
+    <ion-grid>
+      <ion-row text-center class="mt-5">
+        <ion-col class="col-12" *ngIf="!running && time == blankTime">
+
+        </ion-col>
+        <ion-col class="col-12" *ngIf="running">
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</div>
+</ion-content>
